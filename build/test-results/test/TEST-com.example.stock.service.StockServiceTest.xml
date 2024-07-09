@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.stock.service.StockServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-07-09T12:23:25" hostname="DESKTOP-O1EO6HO" time="4.722">
+  <properties/>
+  <testcase name="동시에_여러개의_요청()" classname="com.example.stock.service.StockServiceTest" time="4.722">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;89&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;89&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:639)
+	at app//com.example.stock.service.StockServiceTest.동시에_여러개의_요청(StockServiceTest.java:67)
+	at java.base@17.0.8/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.8/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.8/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[21:23:12.957 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.stock.service.StockServiceTest]: StockServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:23:13.319 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.stock.StockApplication for test class com.example.stock.service.StockServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.1)
+
+2024-07-09T21:23:14.432+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : Starting StockServiceTest using Java 17.0.8 with PID 12424 (started by User in C:\Users\User\Desktop\programming\stock)
+2024-07-09T21:23:14.436+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-09T21:23:16.189+09:00  INFO 12424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-09T21:23:16.414+09:00  INFO 12424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 186 ms. Found 1 JPA repository interface.
+2024-07-09T21:23:17.781+09:00  INFO 12424 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-09T21:23:18.015+09:00  INFO 12424 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-09T21:23:18.159+09:00  INFO 12424 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-09T21:23:19.270+09:00  INFO 12424 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-09T21:23:19.387+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-09T21:23:20.159+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73dbe25
+2024-07-09T21:23:20.166+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-09T21:23:23.018+09:00  INFO 12424 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-09T21:23:23.049+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : drop table if exists stock
+Hibernate: drop table if exists stock
+2024-07-09T21:23:23.099+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : create table stock (id bigint not null auto_increment, product_id bigint, quantity bigint, primary key (id)) engine=InnoDB
+Hibernate: create table stock (id bigint not null auto_increment, product_id bigint, quantity bigint, primary key (id)) engine=InnoDB
+2024-07-09T21:23:23.159+09:00  INFO 12424 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-09T21:23:24.109+09:00  WARN 12424 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-09T21:23:25.695+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : Started StockServiceTest in 11.979 seconds (process running for 15.634)
+2024-07-09T21:23:27.461+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : insert into stock (product_id,quantity) values (?,?)
+Hibernate: insert into stock (product_id,quantity) values (?,?)
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.845+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.845+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.847+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.848+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.849+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.850+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.851+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.932+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.936+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.948+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.952+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.952+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.966+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.972+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.978+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.992+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:27.993+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:27.995+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.004+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.010+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.016+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.022+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.037+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.038+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.054+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.054+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.071+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.103+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.107+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.112+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.118+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.119+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.126+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.135+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.142+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.142+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.146+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.150+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.152+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.165+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.166+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.170+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.177+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.177+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.178+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.193+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.204+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.368+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.370+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.391+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.394+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.394+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.428+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.432+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.435+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.437+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.451+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.452+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.461+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.463+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.490+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.501+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.501+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.512+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.514+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.517+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.535+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.567+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.582+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.604+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.616+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.629+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.632+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.637+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.645+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.647+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.649+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.654+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.655+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.660+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.669+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.669+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.682+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.684+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.690+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.693+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.705+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.750+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.759+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.768+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.802+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.806+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.812+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.821+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.822+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.823+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.832+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.834+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.840+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.841+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.909+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.915+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.916+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.921+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.925+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.927+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.932+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.984+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.992+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:28.994+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:28.995+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.002+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.007+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.007+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.012+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.025+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.031+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.031+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.093+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.096+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.119+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.120+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.129+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.131+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.137+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.139+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.147+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.169+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.178+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.179+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.182+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.189+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.189+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.190+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.195+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.198+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.207+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.207+09:00 DEBUG 12424 --- [ool-2-thread-14] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.214+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.214+09:00 DEBUG 12424 --- [ool-2-thread-14] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.236+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.237+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.247+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.253+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.268+09:00 DEBUG 12424 --- [pool-2-thread-9] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.268+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.276+09:00 DEBUG 12424 --- [pool-2-thread-9] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.305+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.351+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.410+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.410+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.413+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.458+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.463+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.475+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.481+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.501+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.503+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.514+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.523+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.524+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.533+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.535+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.552+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.571+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.576+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.587+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.639+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.648+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.651+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.659+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.692+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.692+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.704+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.710+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.715+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.732+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.736+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.741+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.761+09:00 DEBUG 12424 --- [ool-2-thread-13] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.763+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.782+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.784+09:00 DEBUG 12424 --- [ool-2-thread-13] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.786+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.804+09:00 DEBUG 12424 --- [ool-2-thread-12] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:29.806+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.818+09:00 DEBUG 12424 --- [ool-2-thread-12] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
+Hibernate: update stock set product_id=?,quantity=? where id=?
+2024-07-09T21:23:29.930+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
+2024-07-09T21:23:30.410+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0
+Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0
+2024-07-09T21:23:30.430+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : delete from stock where id=?
+Hibernate: delete from stock where id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
