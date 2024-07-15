@@ -1,22 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.stock.service.StockServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-07-09T12:23:25" hostname="DESKTOP-O1EO6HO" time="4.722">
+<testsuite name="com.example.stock.service.StockServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-07-15T12:52:40" hostname="DESKTOP-O1EO6HO" time="0.072">
   <properties/>
-  <testcase name="동시에_여러개의_요청()" classname="com.example.stock.service.StockServiceTest" time="4.722">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;89&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;0&gt; but was: &lt;89&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:639)
-	at app//com.example.stock.service.StockServiceTest.동시에_여러개의_요청(StockServiceTest.java:67)
-	at java.base@17.0.8/java.lang.reflect.Method.invoke(Method.java:568)
-	at java.base@17.0.8/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.8/java.util.ArrayList.forEach(ArrayList.java:1511)
+  <testcase name="동시에_여러개의_요청()" classname="com.example.stock.service.StockServiceTest" time="0.072">
+    <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1851c7d2 testClass = com.example.stock.service.StockServiceTest, locations = [], classes = [com.example.stock.StockApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4097cac, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@52d645b1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3d9f6567, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2e554a3b, org.springframework.boot.test.context.SpringBootTestAnnotation@df1d9e44], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1851c7d2 testClass = com.example.stock.service.StockServiceTest, locations = [], classes = [com.example.stock.StockApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4097cac, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@52d645b1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3d9f6567, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2e554a3b, org.springframework.boot.test.context.SpringBootTestAnnotation@df1d9e44], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at app//org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at app//org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at app//org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at app//org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at app//org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at app//org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at app//org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at app//org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at app//org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at app//org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at app//org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at app//org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at app//org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at app//org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at app//org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at app//org.hibernate.boot.model.relational.Database.&lt;init&gt;(Database.java:45)
+	at app//org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at app//org.hibernate.boot.internal.InFlightMetadataCollectorImpl.&lt;init&gt;(InFlightMetadataCollectorImpl.java:189)
+	at app//org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at app//org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at app//org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at app//org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at app//org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at app//org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at app//org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at app//org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 37 more
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at app//org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at app//org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at app//org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152)
+	at app//org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362)
+	at app//org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at app//org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at app//org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at app//org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 52 more
 </failure>
   </testcase>
-  <system-out><![CDATA[21:23:12.957 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.stock.service.StockServiceTest]: StockServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:23:13.319 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.stock.StockApplication for test class com.example.stock.service.StockServiceTest
+  <system-out><![CDATA[21:52:28.689 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.stock.service.StockServiceTest]: StockServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:52:29.178 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.stock.StockApplication for test class com.example.stock.service.StockServiceTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -27,433 +86,468 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-07-09T21:23:14.432+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : Starting StockServiceTest using Java 17.0.8 with PID 12424 (started by User in C:\Users\User\Desktop\programming\stock)
-2024-07-09T21:23:14.436+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : No active profile set, falling back to 1 default profile: "default"
-2024-07-09T21:23:16.189+09:00  INFO 12424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-07-09T21:23:16.414+09:00  INFO 12424 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 186 ms. Found 1 JPA repository interface.
-2024-07-09T21:23:17.781+09:00  INFO 12424 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-07-09T21:23:18.015+09:00  INFO 12424 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-07-09T21:23:18.159+09:00  INFO 12424 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-07-09T21:23:19.270+09:00  INFO 12424 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-07-09T21:23:19.387+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-07-09T21:23:20.159+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73dbe25
-2024-07-09T21:23:20.166+09:00  INFO 12424 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-07-09T21:23:23.018+09:00  INFO 12424 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-07-09T21:23:23.049+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : drop table if exists stock
-Hibernate: drop table if exists stock
-2024-07-09T21:23:23.099+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : create table stock (id bigint not null auto_increment, product_id bigint, quantity bigint, primary key (id)) engine=InnoDB
-Hibernate: create table stock (id bigint not null auto_increment, product_id bigint, quantity bigint, primary key (id)) engine=InnoDB
-2024-07-09T21:23:23.159+09:00  INFO 12424 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-07-09T21:23:24.109+09:00  WARN 12424 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-07-09T21:23:25.695+09:00  INFO 12424 --- [    Test worker] c.e.stock.service.StockServiceTest       : Started StockServiceTest in 11.979 seconds (process running for 15.634)
-2024-07-09T21:23:27.461+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : insert into stock (product_id,quantity) values (?,?)
-Hibernate: insert into stock (product_id,quantity) values (?,?)
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.779+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.844+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.845+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.845+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.847+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.848+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.849+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.850+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.851+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.932+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.936+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.948+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.952+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.952+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.966+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.972+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.978+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.992+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:27.993+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:27.995+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.004+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.010+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.016+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.022+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.037+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.038+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.054+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.054+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.071+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.103+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.107+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.112+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.118+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.119+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.126+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.135+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.142+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.142+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.146+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.150+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.152+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.165+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.166+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.170+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.177+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.177+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.178+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.193+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.204+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.368+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.370+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.391+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.394+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.394+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.428+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.432+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.435+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.437+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.451+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.452+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.461+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.463+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.490+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.501+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.501+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.512+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.514+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.517+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.535+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.567+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.582+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.604+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.616+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.629+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.632+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.637+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.645+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.647+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.649+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.654+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.655+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.660+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.669+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.669+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.682+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.684+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.690+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.693+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.705+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.750+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.759+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.768+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.802+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.806+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.812+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.821+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.822+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.823+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.832+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.834+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.840+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.841+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.909+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.915+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.916+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.921+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.925+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.927+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.932+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.984+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.992+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:28.994+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:28.995+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.002+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.007+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.007+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.012+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.025+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.031+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.031+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.093+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.096+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.119+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.120+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.129+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.131+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.137+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.139+09:00 DEBUG 12424 --- [ool-2-thread-16] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.147+09:00 DEBUG 12424 --- [pool-2-thread-7] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.169+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.178+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.179+09:00 DEBUG 12424 --- [pool-2-thread-5] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.182+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.189+09:00 DEBUG 12424 --- [pool-2-thread-2] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.189+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.190+09:00 DEBUG 12424 --- [pool-2-thread-8] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.195+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.198+09:00 DEBUG 12424 --- [ool-2-thread-11] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.207+09:00 DEBUG 12424 --- [ool-2-thread-31] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.207+09:00 DEBUG 12424 --- [ool-2-thread-14] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.214+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.214+09:00 DEBUG 12424 --- [ool-2-thread-14] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.236+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.237+09:00 DEBUG 12424 --- [ool-2-thread-27] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.247+09:00 DEBUG 12424 --- [ool-2-thread-23] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.253+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.268+09:00 DEBUG 12424 --- [pool-2-thread-9] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.268+09:00 DEBUG 12424 --- [pool-2-thread-6] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.276+09:00 DEBUG 12424 --- [pool-2-thread-9] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.305+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.351+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.410+09:00 DEBUG 12424 --- [ool-2-thread-15] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.410+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.413+09:00 DEBUG 12424 --- [ool-2-thread-29] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.458+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.463+09:00 DEBUG 12424 --- [ool-2-thread-21] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.475+09:00 DEBUG 12424 --- [ool-2-thread-24] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.481+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.501+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.503+09:00 DEBUG 12424 --- [pool-2-thread-3] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.514+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.523+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.524+09:00 DEBUG 12424 --- [ool-2-thread-10] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.533+09:00 DEBUG 12424 --- [ool-2-thread-22] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.535+09:00 DEBUG 12424 --- [ool-2-thread-30] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.552+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.571+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.576+09:00 DEBUG 12424 --- [ool-2-thread-26] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.587+09:00 DEBUG 12424 --- [ool-2-thread-18] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.639+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.648+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.651+09:00 DEBUG 12424 --- [ool-2-thread-17] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.659+09:00 DEBUG 12424 --- [ool-2-thread-19] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.692+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.692+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.704+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.710+09:00 DEBUG 12424 --- [pool-2-thread-1] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.715+09:00 DEBUG 12424 --- [ool-2-thread-20] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.732+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.736+09:00 DEBUG 12424 --- [pool-2-thread-4] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.741+09:00 DEBUG 12424 --- [ool-2-thread-25] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.761+09:00 DEBUG 12424 --- [ool-2-thread-13] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.763+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.782+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.784+09:00 DEBUG 12424 --- [ool-2-thread-13] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.786+09:00 DEBUG 12424 --- [ool-2-thread-28] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.804+09:00 DEBUG 12424 --- [ool-2-thread-12] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:29.806+09:00 DEBUG 12424 --- [ool-2-thread-32] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.818+09:00 DEBUG 12424 --- [ool-2-thread-12] org.hibernate.SQL                        : update stock set product_id=?,quantity=? where id=?
-Hibernate: update stock set product_id=?,quantity=? where id=?
-2024-07-09T21:23:29.930+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0 where s1_0.id=?
-2024-07-09T21:23:30.410+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0
-Hibernate: select s1_0.id,s1_0.product_id,s1_0.quantity from stock s1_0
-2024-07-09T21:23:30.430+09:00 DEBUG 12424 --- [    Test worker] org.hibernate.SQL                        : delete from stock where id=?
-Hibernate: delete from stock where id=?
+2024-07-15T21:52:31.409+09:00  INFO 30448 --- [    Test worker] c.e.stock.service.StockServiceTest       : Starting StockServiceTest using Java 17.0.8 with PID 30448 (started by User in C:\Users\User\Desktop\programming\stock)
+2024-07-15T21:52:31.415+09:00  INFO 30448 --- [    Test worker] c.e.stock.service.StockServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2024-07-15T21:52:34.410+09:00  INFO 30448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-15T21:52:34.707+09:00  INFO 30448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 226 ms. Found 1 JPA repository interface.
+2024-07-15T21:52:36.240+09:00  INFO 30448 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-15T21:52:36.478+09:00  INFO 30448 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-15T21:52:36.594+09:00  INFO 30448 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-15T21:52:38.551+09:00  INFO 30448 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-15T21:52:38.668+09:00  INFO 30448 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-15T21:52:40.019+09:00  WARN 30448 --- [    Test worker] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:119) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:66) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+
+2024-07-15T21:52:40.111+09:00 ERROR 30448 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-07-15T21:52:40.113+09:00  WARN 30448 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-07-15T21:52:40.264+09:00  INFO 30448 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-15T21:52:40.512+09:00 ERROR 30448 --- [    Test worker] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:119) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:66) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.10.jar:6.1.10]
+	... 107 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	... 122 common frames omitted
+
+2024-07-15T21:52:40.659+09:00  WARN 30448 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.stock.service.StockServiceTest@250a946]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@1851c7d2 testClass = com.example.stock.service.StockServiceTest, locations = [], classes = [com.example.stock.StockApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@4097cac, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@52d645b1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3d9f6567, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2e554a3b, org.springframework.boot.test.context.SpringBootTestAnnotation@df1d9e44], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:119) ~[na:na]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:66) ~[na:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624) ~[spring-context-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.10.jar:6.1.10]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.1.jar:3.3.1]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.10.jar:6.1.10]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.10.jar:6.1.10]
+	... 87 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835) ~[spring-beans-6.1.10.jar:6.1.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-6.1.10.jar:6.1.10]
+	... 107 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
+	... 122 common frames omitted
+
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[
+
+
+============================
+CONDITIONS EVALUATION REPORT
+============================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+]]></system-err>
 </testsuite>
