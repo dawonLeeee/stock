@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class OptimisticLockFacadeTest {
 
     @Autowired
-    private OptimisticLockFacade optimisticLockFacade;
+    private NamedLockStockFacade namedLockStockFacade;
 
     @Autowired
     private StockRepository stockRepository;
@@ -45,9 +45,7 @@ class OptimisticLockFacadeTest {
         for(int i = 0; i < threadCount; i++) {
             executorService.submit(() -> {
                 try {
-                    optimisticLockFacade.decrease(1L, 1L);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    namedLockStockFacade.decrease(1L, 1L);
                 } finally {
                     // 각 스레드가 작업을 마치면 값을 1씩 감소시킴
                     latch.countDown();
@@ -65,4 +63,7 @@ class OptimisticLockFacadeTest {
 
     }
 
+    @Test
+    void decrease() {
+    }
 }
